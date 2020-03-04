@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Serve">
+<meta name="description" content="守护线程守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。 问题导入：JVM程序在什么情况下会退出？1The Java Virtual Machine exits when the only threads running are all daemon threads.  上面这句话指的是JVM正常退出的情况，不包括System.exit()方法，显然，JVM会在当所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to Use Hexo">
-<meta property="og:url" content="http://yoursite.com/2020/02/29/1_HowToUseHexo/index.html">
+<meta property="og:title" content="JAVA-守护线程">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/2_DaemonThread/index.html">
 <meta property="og:site_name" content="Taiyoyo&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Serve">
-<meta property="article:published_time" content="2020-02-29T08:56:37.620Z">
-<meta property="article:modified_time" content="2020-03-04T15:52:12.338Z">
+<meta property="og:description" content="守护线程守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。 问题导入：JVM程序在什么情况下会退出？1The Java Virtual Machine exits when the only threads running are all daemon threads.  上面这句话指的是JVM正常退出的情况，不包括System.exit()方法，显然，JVM会在当所">
+<meta property="article:published_time" content="2020-03-04T15:17:23.266Z">
+<meta property="article:modified_time" content="2020-03-04T15:52:07.783Z">
 <meta property="article:author" content="Taiyoyo">
 <meta name="twitter:card" content="summary">
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/29/1_HowToUseHexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/04/2_DaemonThread/"/>
 
 
 
 
 
-  <title>How to Use Hexo | Taiyoyo's Blog</title>
+  <title>JAVA-守护线程 | Taiyoyo's Blog</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/1_HowToUseHexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/2_DaemonThread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taiyoyo">
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">How to Use Hexo</h1>
+          <h1 class="post-title" itemprop="name headline">JAVA-守护线程</h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-29T16:56:37+08:00">
-                2020-02-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-04T23:17:23+08:00">
+                2020-03-04
               </time>
             
 
@@ -270,6 +270,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/%E7%BA%BF%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">线程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -298,26 +331,15 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>With the release of Hexo 3, the server has been separated from the main module. To start using the server, you will first have to install hexo-server.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<p>Once the server has been installed, run the following command to start the server. Your website will run at  <code>http://localhost:4000</code> by default. When the server is running, Hexo will watch for file changes and update automatically so it’s not necessary to manually restart the server.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>If you want to change the port or if you’re encountering <code>EADDRINUSE</code> errors, use the <code>-p</code> option to set a different port.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure>
-<h3 id="Static-Mode"><a href="#Static-Mode" class="headerlink" title="Static Mode"></a>Static Mode</h3><p>In static mode, only files in the <code>public</code> folder will be served and file watching is disabled. You have to run <code>hexo generate</code> before starting the server. Usually used in production.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -s</span><br></pre></td></tr></table></figure>
-<h3 id="Custom-IP"><a href="#Custom-IP" class="headerlink" title="Custom IP"></a>Custom IP</h3><p>Hexo runs the server at <code>0.0.0.0</code> by default. You can override the default IP setting.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -i xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
-</br>
+        <h1 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h1><p>守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。</p>
+<h2 id="问题导入：JVM程序在什么情况下会退出？"><a href="#问题导入：JVM程序在什么情况下会退出？" class="headerlink" title="问题导入：JVM程序在什么情况下会退出？"></a>问题导入：JVM程序在什么情况下会退出？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The Java Virtual Machine exits when the only threads running are all daemon threads.</span><br></pre></td></tr></table></figure>
 
-<h1 id="Generating"><a href="#Generating" class="headerlink" title="Generating"></a>Generating</h1><p>Generating static files with Hexo is quite easy and fast.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>上面这句话指的是JVM正常退出的情况，不包括<code>System.exit()</code>方法，显然，JVM会在当所有线程都是守护线程时退出。</p>
+<h2 id="什么是守护线程？"><a href="#什么是守护线程？" class="headerlink" title="什么是守护线程？"></a>什么是守护线程？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException</span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                TimeUnit.MINUTES.sleep(<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="string">"I'm not a daemon thread."</span>);</span><br><span class="line"><span class="comment">//        thread.setDaemon(true);</span></span><br><span class="line">        thread.start();</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">10</span>);</span><br><span class="line">        System.out.println(<span class="string">"Main thread finished lifecycle."</span>);</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">3000</span>);</span><br><span class="line">        System.out.println(<span class="string">"Seems like the program is still running..."</span>);</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">3000</span>);</span><br><span class="line">        System.out.println(<span class="string">"Why..."</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Watch-for-File-Changes"><a href="#Watch-for-File-Changes" class="headerlink" title="Watch for File Changes"></a>Watch for File Changes</h3><p>Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure>
-<h3 id="Deploy-After-Generating"><a href="#Deploy-After-Generating" class="headerlink" title="Deploy After Generating"></a>Deploy After Generating</h3><p>To deploy after generating, you can run one of the following commands. There is no difference between the two.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
+<p>上述代码片段的运行结果表示main线程早已结束，但是JVM迟迟不结束，因为还有一个非守护线程在运行。</p>
+<h2 id="为什么要有守护线程？"><a href="#为什么要有守护线程？" class="headerlink" title="为什么要有守护线程？"></a>为什么要有守护线程？</h2><p>如果一个JVM进程中没有一个非守护线程，那么JVM会退出，也就是说守护线程具有自动结束生命周期的特性，而非守护线程则不具备这个特性，试想下如果JVM进程的垃圾回收线程是非守护线程，如果main线程完成了工作，则JVM无法退出，因为垃圾回收线程还处于工作状态。比如有一个游戏程序，其中有一个线程正在与服务器不断地交互以获取玩家最新的金币、武器信息，若希望再退出游戏客户端的时候，这些数据同步的工作也能够立即结束，这可以将这样的线程设置为守护线程。</p>
+
       
     </div>
     
@@ -341,15 +363,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/03/04/1_ThreadConstruction/" rel="next" title="JAVA-Thread构造函数">
+                <i class="fa fa-chevron-left"></i> JAVA-Thread构造函数
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/02/NewWordsCollection/" rel="prev" title="第一讲：读数字，懂单词">
-                第一讲：读数字，懂单词 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,7 +498,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Server"><span class="nav-number">1.</span> <span class="nav-text">Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-Mode"><span class="nav-number">1.0.1.</span> <span class="nav-text">Static Mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-IP"><span class="nav-number">1.0.2.</span> <span class="nav-text">Custom IP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Generating"><span class="nav-number">2.</span> <span class="nav-text">Generating</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Watch-for-File-Changes"><span class="nav-number">2.0.1.</span> <span class="nav-text">Watch for File Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-After-Generating"><span class="nav-number">2.0.2.</span> <span class="nav-text">Deploy After Generating</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#守护线程"><span class="nav-number">1.</span> <span class="nav-text">守护线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题导入：JVM程序在什么情况下会退出？"><span class="nav-number">1.1.</span> <span class="nav-text">问题导入：JVM程序在什么情况下会退出？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是守护线程？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是守护线程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要有守护线程？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么要有守护线程？</span></a></li></ol></li></ol></div>
             
 
           </div>
