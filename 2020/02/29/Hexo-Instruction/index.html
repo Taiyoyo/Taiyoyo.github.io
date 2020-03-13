@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Hello!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Serve">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Use Hexo">
+<meta property="og:url" content="http://yoursite.com/2020/02/29/Hexo-Instruction/index.html">
 <meta property="og:site_name" content="Taiyoyo&#39;s Blog">
-<meta property="og:description" content="Hello!">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Serve">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-04T15:47:03.000Z">
-<meta property="article:modified_time" content="2020-03-06T05:33:49.192Z">
+<meta property="article:published_time" content="2020-02-29T08:56:37.620Z">
+<meta property="article:modified_time" content="2020-03-04T15:52:12.338Z">
 <meta property="article:author" content="Taiyoyo">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/29/Hexo-Instruction/"/>
 
 
 
 
 
-  <title>categories | Taiyoyo's Blog</title>
+  <title>How to Use Hexo | Taiyoyo's Blog</title>
   
 
 
@@ -251,40 +251,156 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/Hexo-Instruction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taiyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/CyberSheep.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taiyoyo's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                5 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Thread/">Thread</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">软件项目管理</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">How to Use Hexo</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-29T16:56:37+08:00">
+                2020-02-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>With the release of Hexo 3, the server has been separated from the main module. To start using the server, you will first have to install hexo-server.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>Once the server has been installed, run the following command to start the server. Your website will run at  <code>http://localhost:4000</code> by default. When the server is running, Hexo will watch for file changes and update automatically so it’s not necessary to manually restart the server.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>If you want to change the port or if you’re encountering <code>EADDRINUSE</code> errors, use the <code>-p</code> option to set a different port.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure>
+<h3 id="Static-Mode"><a href="#Static-Mode" class="headerlink" title="Static Mode"></a>Static Mode</h3><p>In static mode, only files in the <code>public</code> folder will be served and file watching is disabled. You have to run <code>hexo generate</code> before starting the server. Usually used in production.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -s</span><br></pre></td></tr></table></figure>
+<h3 id="Custom-IP"><a href="#Custom-IP" class="headerlink" title="Custom IP"></a>Custom IP</h3><p>Hexo runs the server at <code>0.0.0.0</code> by default. You can override the default IP setting.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -i xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+</br>
+
+<h1 id="Generating"><a href="#Generating" class="headerlink" title="Generating"></a>Generating</h1><p>Generating static files with Hexo is quite easy and fast.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Watch-for-File-Changes"><a href="#Watch-for-File-Changes" class="headerlink" title="Watch for File Changes"></a>Watch for File Changes</h3><p>Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-After-Generating"><a href="#Deploy-After-Generating" class="headerlink" title="Deploy After Generating"></a>Deploy After Generating</h3><p>To deploy after generating, you can run one of the following commands. There is no difference between the two.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/02/English-Words-Numbers-Counted-Words-Conquered%EF%BC%8C%E6%87%82%E5%8D%95%E8%AF%8D/" rel="prev" title="第一讲：读数字，懂单词">
+                第一讲：读数字，懂单词 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -392,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello"><span class="nav-number">1.</span> <span class="nav-text">Hello!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Server"><span class="nav-number">1.</span> <span class="nav-text">Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-Mode"><span class="nav-number">1.0.1.</span> <span class="nav-text">Static Mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-IP"><span class="nav-number">1.0.2.</span> <span class="nav-text">Custom IP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Generating"><span class="nav-number">2.</span> <span class="nav-text">Generating</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Watch-for-File-Changes"><span class="nav-number">2.0.1.</span> <span class="nav-text">Watch for File Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-After-Generating"><span class="nav-number">2.0.2.</span> <span class="nav-text">Deploy After Generating</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

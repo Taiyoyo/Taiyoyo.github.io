@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Hello!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="守护线程守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。 问题导入：JVM程序在什么情况下会退出？1The Java Virtual Machine exits when the only threads running are all daemon threads.  上面这句话指的是JVM正常退出的情况，不包括System.exit()方法，显然，JVM会在当所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-守护线程">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/Java-Thread-Daemon/index.html">
 <meta property="og:site_name" content="Taiyoyo&#39;s Blog">
-<meta property="og:description" content="Hello!">
+<meta property="og:description" content="守护线程守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。 问题导入：JVM程序在什么情况下会退出？1The Java Virtual Machine exits when the only threads running are all daemon threads.  上面这句话指的是JVM正常退出的情况，不包括System.exit()方法，显然，JVM会在当所">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-04T15:47:03.000Z">
-<meta property="article:modified_time" content="2020-03-06T05:33:49.192Z">
+<meta property="article:published_time" content="2020-03-04T15:17:23.266Z">
+<meta property="article:modified_time" content="2020-03-12T16:02:06.044Z">
 <meta property="article:author" content="Taiyoyo">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/04/Java-Thread-Daemon/"/>
 
 
 
 
 
-  <title>categories | Taiyoyo's Blog</title>
+  <title>Java-守护线程 | Taiyoyo's Blog</title>
   
 
 
@@ -251,40 +251,182 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/Java-Thread-Daemon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taiyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/CyberSheep.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taiyoyo's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                5 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Thread/">Thread</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD/">英语</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">软件项目管理</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Java-守护线程</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-04T23:17:23+08:00">
+                2020-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Thread/" itemprop="url" rel="index">
+                    <span itemprop="name">Thread</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h1><p>守护线程是一类比较特殊的线程，一般用于处理一些后台的工作，比如JDK的垃圾回收。</p>
+<h2 id="问题导入：JVM程序在什么情况下会退出？"><a href="#问题导入：JVM程序在什么情况下会退出？" class="headerlink" title="问题导入：JVM程序在什么情况下会退出？"></a>问题导入：JVM程序在什么情况下会退出？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The Java Virtual Machine exits when the only threads running are all daemon threads.</span><br></pre></td></tr></table></figure>
+
+<p>上面这句话指的是JVM正常退出的情况，不包括<code>System.exit()</code>方法，显然，JVM会在当所有线程都是守护线程时退出。</p>
+<h2 id="什么是守护线程？"><a href="#什么是守护线程？" class="headerlink" title="什么是守护线程？"></a>什么是守护线程？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException</span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                TimeUnit.MINUTES.sleep(<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="string">"I'm not a daemon thread."</span>);</span><br><span class="line"><span class="comment">//        thread.setDaemon(true);</span></span><br><span class="line">        thread.start();</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">10</span>);</span><br><span class="line">        System.out.println(<span class="string">"Main thread finished lifecycle."</span>);</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">3000</span>);</span><br><span class="line">        System.out.println(<span class="string">"Seems like the program is still running..."</span>);</span><br><span class="line">        TimeUnit.MILLISECONDS.sleep(<span class="number">3000</span>);</span><br><span class="line">        System.out.println(<span class="string">"Why..."</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码片段的运行结果表示main线程早已结束，但是JVM迟迟不结束，因为还有一个非守护线程在运行。</p>
+<h2 id="为什么要有守护线程？"><a href="#为什么要有守护线程？" class="headerlink" title="为什么要有守护线程？"></a>为什么要有守护线程？</h2><p>如果一个JVM进程中没有一个非守护线程，那么JVM会退出，也就是说守护线程具有自动结束生命周期的特性，而非守护线程则不具备这个特性，试想下如果JVM进程的垃圾回收线程是非守护线程，如果main线程完成了工作，则JVM无法退出，因为垃圾回收线程还处于工作状态。比如有一个游戏程序，其中有一个线程正在与服务器不断地交互以获取玩家最新的金币、武器信息，若希望再退出游戏客户端的时候，这些数据同步的工作也能够立即结束，这可以将这样的线程设置为守护线程。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/04/Java-Thread-Construction/" rel="next" title="Java-Thread构造函数">
+                <i class="fa fa-chevron-left"></i> Java-Thread构造函数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/05/Java-Thread-SleepETC/" rel="prev" title="Java-Thread <sleep, yield, interrupt, join>">
+                Java-Thread <sleep, yield, interrupt, join> <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -392,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello"><span class="nav-number">1.</span> <span class="nav-text">Hello!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#守护线程"><span class="nav-number">1.</span> <span class="nav-text">守护线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题导入：JVM程序在什么情况下会退出？"><span class="nav-number">1.1.</span> <span class="nav-text">问题导入：JVM程序在什么情况下会退出？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是守护线程？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是守护线程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要有守护线程？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么要有守护线程？</span></a></li></ol></li></ol></div>
             
 
           </div>

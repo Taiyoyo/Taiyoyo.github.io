@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="一个线程实例是怎样被构造的呢？所有Thread的构造函数，不管是无参的还是有参的，最终都会调用一个init函数。 线程命名线程的默认命名123Thread();Thread(Runnable target);Thread(ThreadGroup group, Runnable target);  线程是怎样默认命名的？123456789&lt;From java.lang.Thread&gt;pu">
+<meta name="description" content="预备知识STLstack 栈123456789101112131415161718#include &lt;stdio.h&gt;#include &lt;stack&gt;int main()&amp;#123;	std::stack&lt;int&gt; s;	if(s.empty())		printf(&quot;s is empty!&quot;);	s.push(5);	s.push(6);	s.push(10);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-Thread构造函数">
-<meta property="og:url" content="http://yoursite.com/2020/03/04/1_ThreadConstruction/index.html">
+<meta property="og:title" content="算法 第一阶段">
+<meta property="og:url" content="http://yoursite.com/2020/03/10/Algorithm-The-First-Stage/index.html">
 <meta property="og:site_name" content="Taiyoyo&#39;s Blog">
-<meta property="og:description" content="一个线程实例是怎样被构造的呢？所有Thread的构造函数，不管是无参的还是有参的，最终都会调用一个init函数。 线程命名线程的默认命名123Thread();Thread(Runnable target);Thread(ThreadGroup group, Runnable target);  线程是怎样默认命名的？123456789&lt;From java.lang.Thread&gt;pu">
+<meta property="og:description" content="预备知识STLstack 栈123456789101112131415161718#include &lt;stdio.h&gt;#include &lt;stack&gt;int main()&amp;#123;	std::stack&lt;int&gt; s;	if(s.empty())		printf(&quot;s is empty!&quot;);	s.push(5);	s.push(6);	s.push(10);">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-04T13:49:52.641Z">
-<meta property="article:modified_time" content="2020-03-05T07:32:24.237Z">
+<meta property="article:published_time" content="2020-03-10T08:48:08.014Z">
+<meta property="article:modified_time" content="2020-03-12T16:03:44.918Z">
 <meta property="article:author" content="Taiyoyo">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/04/1_ThreadConstruction/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/10/Algorithm-The-First-Stage/"/>
 
 
 
 
 
-  <title>Java-Thread构造函数 | Taiyoyo's Blog</title>
+  <title>算法 第一阶段 | Taiyoyo's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/1_ThreadConstruction/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/10/Algorithm-The-First-Stage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taiyoyo">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java-Thread构造函数</h1>
+          <h1 class="post-title" itemprop="name headline">算法 第一阶段</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-04T21:49:52+08:00">
-                2020-03-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-10T16:48:08+08:00">
+                2020-03-10
               </time>
             
 
@@ -315,19 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/%E7%BA%BF%E7%A8%8B/" itemprop="url" rel="index">
-                    <span itemprop="name">线程</span>
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
                   </a>
                 </span>
 
@@ -363,22 +352,10 @@
       
 
       
-        <h2 id="一个线程实例是怎样被构造的呢？"><a href="#一个线程实例是怎样被构造的呢？" class="headerlink" title="一个线程实例是怎样被构造的呢？"></a>一个线程实例是怎样被构造的呢？</h2><p>所有Thread的构造函数，不管是无参的还是有参的，最终都会调用一个init函数。</p>
-<h2 id="线程命名"><a href="#线程命名" class="headerlink" title="线程命名"></a>线程命名</h2><h3 id="线程的默认命名"><a href="#线程的默认命名" class="headerlink" title="线程的默认命名"></a>线程的默认命名</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Thread();</span><br><span class="line">Thread(Runnable target);</span><br><span class="line">Thread(ThreadGroup group, Runnable target);</span><br></pre></td></tr></table></figure>
+        <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><h3 id="stack-栈"><a href="#stack-栈" class="headerlink" title="stack 栈"></a>stack 栈</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">if</span>(s.empty())</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"s is empty!"</span>);</span><br><span class="line">	s.push(<span class="number">5</span>);</span><br><span class="line">	s.push(<span class="number">6</span>);</span><br><span class="line">	s.push(<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"s.top = %d\n"</span>, s.top);</span><br><span class="line">	s.pop();</span><br><span class="line">	s.pop();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"s.top = %d\n"</span>, s.top);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"s.size = %d\n"</span>, s.top);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="线程是怎样默认命名的？"><a href="#线程是怎样默认命名的？" class="headerlink" title="线程是怎样默认命名的？"></a>线程是怎样默认命名的？</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;From java.lang.Thread&gt;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Thread</span><span class="params">(Runnable target)</span></span>&#123;</span><br><span class="line">	init(<span class="keyword">null</span>, target, <span class="string">"Thread-"</span> + nextThreadNum(), <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* For auto numbering anonymous threads. */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> threadInitNumber;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">nextThreadNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> threadInitNumber ++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="线程的人为命名"><a href="#线程的人为命名" class="headerlink" title="线程的人为命名"></a>线程的人为命名</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Thread(String name);</span><br><span class="line">Thread(Runnable target, String name);</span><br><span class="line">Thread(ThreadGroup group, String name);</span><br><span class="line">Thread(ThreadGroup group, Runnable target, String name);</span><br><span class="line">Thread(ThreadGroup group, Runnable target, String name, <span class="keyword">long</span> stackSize);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="如何修改线程的名字"><a href="#如何修改线程的名字" class="headerlink" title="如何修改线程的名字"></a>如何修改线程的名字</h3><p>从java.lang.Thread的源代码可以看出，只有在线程start之前才有机会对线程的名字进行修改，一旦线程start，名字就不能被修改。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;From java.lang.Thread&gt;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> sychronized <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">	checkAccess();</span><br><span class="line">	<span class="keyword">if</span> (name == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"name cannot be null"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">if</span> (threadStatus != <span class="number">0</span>) </span><br><span class="line">    setNativeName(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？"><a href="#线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？" class="headerlink" title="线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？"></a>线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;From java.lang.Thread&gt;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ThreadGroup group, Runnable target, String name, <span class="keyword">long</span> stackSize, AccessControlContext acc)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(name == <span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"name cannot be null"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.name = name.toCharArray();</span><br><span class="line">	Thread parent = currentThread();</span><br><span class="line">	SecurityManager security = System.getSecurityManager();</span><br><span class="line">	<span class="keyword">if</span>(group == <span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="comment">/* Determine if it's an applet or not */</span></span><br><span class="line">		<span class="comment">/* If there is a security manager, ask the security manager what to do. */</span></span><br><span class="line">		<span class="keyword">if</span>(security != <span class="keyword">null</span>)&#123;</span><br><span class="line">			group = security.getThreadGroup();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/* If the security manager doesn't have a strong opinion of the matter use the group of the parent thread. */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以看出：①一条线程肯定是由另外一条线程创建的；②被创建线程的父线程就是创建它的线程。<br>还可以看出：如果没有给新生线程指定线程组，则它会被加入父线程所在的线程组。</p>
-<hr>
+<h3 id="queue-队列"><a href="#queue-队列" class="headerlink" title="queue 队列"></a>queue 队列</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">if</span>(q.empty())</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"q is empty!\n"</span>);</span><br><span class="line">	q.push(<span class="number">5</span>);</span><br><span class="line">	q.push(<span class="number">6</span>);</span><br><span class="line">	q.push(<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"q.front = %d\n"</span>, q.front());</span><br><span class="line">	q.pop();</span><br><span class="line">	q.pop();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"q,front = %d\n"</span>, q.front());</span><br><span class="line">	q.push(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"q.back = %d\n"</span>, q.back());</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"q.size = %d\n"</span>, q.<span class="built_in">size</span>());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="用-queue-实现-stack"><a href="#用-queue-实现-stack" class="headerlink" title="用 queue 实现 stack"></a>用 queue 实现 stack</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	MyStack()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; temp_queue;</span><br><span class="line">			temp_queue.push(x);</span><br><span class="line">			<span class="keyword">while</span>(!_data.empty())</span><br><span class="line">			&#123;</span><br><span class="line">				temp_queue.push(_data.top());</span><br><span class="line">				_data.pop();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">while</span>(!temp_queue.empty())</span><br><span class="line">			&#123;</span><br><span class="line">				_data.push(temp_queue.top);</span><br><span class="line">				temp_queue.pop();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">int</span> x = _data.front();</span><br><span class="line">			_data.pop();</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">int</span> x = _data.front();</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _data.empty();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; _data;	</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -403,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/04/SoftwareProjectManagement/" rel="next" title="个人博客项目管理">
-                <i class="fa fa-chevron-left"></i> 个人博客项目管理
+              <a href="/2020/03/10/Algorithm-N-Queens/" rel="next" title="算法 n皇后问题">
+                <i class="fa fa-chevron-left"></i> 算法 n皇后问题
               </a>
             
           </div>
@@ -413,8 +390,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/04/2_DaemonThread/" rel="prev" title="Java-守护线程">
-                Java-守护线程 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/12/English-Recite-Airplane-Announcement-Before-Taking-Off/" rel="prev" title="Airplane Announcement Before Taking Off">
+                Airplane Announcement Before Taking Off <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,7 +473,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -507,7 +484,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -542,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个线程实例是怎样被构造的呢？"><span class="nav-number">1.</span> <span class="nav-text">一个线程实例是怎样被构造的呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程命名"><span class="nav-number">2.</span> <span class="nav-text">线程命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的默认命名"><span class="nav-number">2.1.</span> <span class="nav-text">线程的默认命名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线程是怎样默认命名的？"><span class="nav-number">2.1.1.</span> <span class="nav-text">线程是怎样默认命名的？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的人为命名"><span class="nav-number">2.2.</span> <span class="nav-text">线程的人为命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何修改线程的名字"><span class="nav-number">2.3.</span> <span class="nav-text">如何修改线程的名字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？"><span class="nav-number">3.</span> <span class="nav-text">线程与线程之间存在父子关系吗？存在的话，又是怎样实现的呢？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#预备知识"><span class="nav-number">1.</span> <span class="nav-text">预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STL"><span class="nav-number">1.1.</span> <span class="nav-text">STL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stack-栈"><span class="nav-number">1.1.1.</span> <span class="nav-text">stack 栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue-队列"><span class="nav-number">1.1.2.</span> <span class="nav-text">queue 队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用-queue-实现-stack"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">用 queue 实现 stack</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
